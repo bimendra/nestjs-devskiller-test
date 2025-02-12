@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { MockApiService } from 'src/mock-api/mock-api.service';
+import { MockApiService } from '../mock-api/mock-api.service';
 import { RatingDto } from './dto/rating.dto';
-import { Rating } from 'src/common/types/rating.type';
+import { Rating } from '../common/types/rating.type';
 
 @Injectable()
 export class RatingsService {
