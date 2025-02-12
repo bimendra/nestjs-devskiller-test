@@ -10,4 +10,8 @@ export class MockApiService {
     this.ratings.push(newRating);
     return newRating;
   }
+
+  getRatings(): Array<Rating> {
+    return this.ratings;
+  }
 }

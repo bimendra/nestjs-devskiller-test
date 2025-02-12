@@ -1,4 +1,4 @@
-import { Body, Controller, Post, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Get, Post, ValidationPipe } from '@nestjs/common';
 import { RatingsService } from './ratings.service';
 import { RatingDto } from './dto/rating.dto';
 import { RatingValidationPipe } from '../common/pipes/ratingValidation.pipe';
@@ -10,5 +10,10 @@ export class RatingsController {
   @Post()
   addRating(@Body(RatingValidationPipe) newRating: RatingDto) {
     return this.ratingsService.addRating(newRating);
+  }
+
+  @Get('coffee-types')
+  ratedCoffeeTypes() {
+    return this.ratingsService.getRatedCoffeeTypes()
   }
 }

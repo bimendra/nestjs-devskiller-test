@@ -10,4 +10,9 @@ export class RatingsService {
   addRating(newRating: RatingDto): Rating {
     return this.apiService.addRating(newRating);
   }
+
+  getRatedCoffeeTypes(): Array <string> {
+    const allRatings: Array <Rating> = this.apiService.getRatings();
+    return [...new Set<string>(allRatings.map((rating: Rating) => rating.coffeeType))];
+  }
 }
