@@ -5,7 +5,7 @@ import { Rating } from '../common/types/rating.type';
 
 @Injectable()
 export class RatingsService {
-  constructor(private apiService: MockApiService) {}
+  constructor(private readonly apiService: MockApiService) {}
 
   addRating(newRating: RatingDto): Rating {
     return this.apiService.addRating(newRating);
