@@ -7,7 +7,7 @@ export class MockApiService {
   private ratings: Array <Rating> = [];
 
   addRating(newRating: Rating): Rating {
-    this.ratings.push(newRating);
+    this.ratings.push(newRating);    
     return newRating;
   }
 
